@@ -7,6 +7,7 @@ body {
     background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9); /* Gradiente verde suave */
     margin: 0;
     overflow: hidden;
+    overflow-y: auto;
     color: #333;
     text-align: center; /* Centraliza o texto por padrão */
     padding: 10px; /* Adiciona um pequeno padding no body para evitar que o conteúdo toque as bordas em telas muito pequenas */
