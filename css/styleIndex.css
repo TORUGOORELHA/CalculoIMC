@@ -19,7 +19,7 @@ body {
     border-radius: 16px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     z-index: 1;
-    max-width: 600px;/* Aumenta a largura máxima */
+    max-width: 400px;/* Aumenta a largura máxima */
     width: 90%;
     animation: fadeInScale 0.8s ease-out; /* Animação combinada */
     box-sizing: border-box; /* Garante que o padding não adicione largura extra */
