@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo à Área de Saúde e Bem-Estar</title>
+    <link rel="stylesheet" href="./css/styleIndex.css"> <!-- Link para o arquivo CSS -->
+    <!-- Opcional: Adicionar links para ícones ou fontes se desejar -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="intro-container">
+        <h1>Sua Jornada de Saúde Começa Aqui</h1>
+        <p>Explore ferramentas e informações para cuidar do seu bem-estar.</p>
+        
+                <div class="health-elements">
+            <!-- Você pode adicionar ícones, pequenas imagens ou texto relacionado à saúde aqui -->
+            <div class="element">
+                <i class="ri-heart-pulse-line"></i>
+                <h3>Bem-Estar</h3>
+            </div>
+            <div class="element">
+                <i class="ri-body-scan-line"></i>
+                <h3>Avaliação Corporal</h3>
+            </div>
+            <div class="element">
+                <i class="ri-leaf-line"></i> <!-- Ícone de folha substituindo o de nutrição -->
+                <h3>Nutrição</h3>
+            </div>
+        </div>
+
+
+        <p>Use nossa ferramenta para calcular seu Índice de Massa Corporal (IMC):</p>
+        
+        <a href="./pages/calculoIMC.html" class="cta-button">Calcular Meu IMC</a>
+    </div>
+
+    <!-- Elemento para a página de carregamento -->
+    <div id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Carregando Calculadora...</p>
+    </div>
+
+    <script src="./js/scriptIndex.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

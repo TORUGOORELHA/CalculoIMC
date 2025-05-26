@@ -1,0 +1,225 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e8f5e9, #c8e6c9); /* Gradiente verde suave */
+    margin: 0;
+    overflow: hidden;
+    color: #333;
+    text-align: center; /* Centraliza o texto por padrão */
+    padding: 10px; /* Adiciona um pequeno padding no body para evitar que o conteúdo toque as bordas em telas muito pequenas */
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+}
+
+.intro-container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    max-width: 600px; /* Aumenta a largura máxima */
+    width: 90%;
+    animation: fadeInScale 0.8s ease-out; /* Animação combinada */
+    box-sizing: border-box; /* Garante que o padding não adicione largura extra */
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    color: #2e7d32; /* Verde escuro para o título */
+    margin-bottom: 15px;
+    font-size: 2.8em; /* Título maior */
+    font-weight: 700;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+.health-elements {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os elementos */
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.element {
+    text-align: center;
+    flex: 1 1 120px; /* Base flexível para os elementos */
+    /* Adiciona um padding interno para o conteúdo do elemento */
+    padding: 10px;
+}
+
+.element i {
+    font-size: 3em; /* Tamanho dos ícones */
+    color: #4caf50; /* Verde vibrante para ícones */
+    margin-bottom: 10px;
+}
+
+.element h3 {
+    font-size: 1.1em;
+    color: #388e3c; /* Verde um pouco mais escuro */
+}
+
+
+.cta-button {
+    display: inline-block; /* Permite centralizar com text-align no pai */
+    padding: 15px 30px;
+    background-color: #4caf50; /* Verde primário */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-size: 1.3em; /* Botão maior */
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espaço acima do botão */
+}
+
+.cta-button:hover {
+    background-color: #388e3c; /* Verde mais escuro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o overlay de carregamento (mantidos similares) */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s ease-in-out;
+}
+
+#loading-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.loading-spinner {
+    border: 6px solid #e0e0e0;
+    border-top: 6px solid #4caf50; /* Cor do spinner combinando com o tema */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 25px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading-overlay p {
+    color: #333;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Responsividade aprimorada */
+
+/* Para telas menores que 768px */
+@media(max-width: 768px) {
+    .intro-container {
+        padding: 40px; /* Reduz o padding interno */
+    }
+    h1 {
+        font-size: 2.2em; /* Reduz o tamanho do título principal */
+    }
+    p {
+        font-size: 1.1em; /* Reduz o tamanho do texto dos parágrafos */
+        margin-bottom: 25px;
+    }
+    .health-elements {
+        flex-direction: column; /* Elementos em coluna em telas menores */
+        gap: 20px; /* Reduz o espaço entre os elementos */
+        margin-bottom: 30px;
+    }
+    .element {
+        flex: none; /* Remove a base flexível */
+        width: 100%; /* Ocupa a largura total disponível */
+        padding: 8px 0; /* Ajusta padding */
+    }
+    .element i {
+        font-size: 2.5em; /* Reduz o tamanho dos ícones */
+        margin-bottom: 8px;
+    }
+    .element h3 {
+        font-size: 1em; /* Reduz o tamanho do título do elemento */
+    }
+    .cta-button {
+        font-size: 1.2em; /* Reduz o tamanho da fonte do botão */
+        padding: 12px 25px; /* Reduz o padding do botão */
+        margin-top: 15px;
+    }
+    #loading-overlay p {
+        font-size: 1.1em; /* Reduz o tamanho do texto de carregamento */
+    }
+    .loading-spinner {
+        width: 50px; /* Reduz o tamanho do spinner */
+        height: 50px;
+        border-width: 5px; /* Reduz a espessura do spinner */
+        margin-bottom: 20px;
+    }
+}
+
+/* Para telas menores que 480px */
+@media(max-width: 480px) {
+     body {
+        padding: 5px; /* Reduz ainda mais o padding do body */
+    }
+    .intro-container {
+        padding: 30px; /* Reduz ainda mais o padding interno */
+    }
+    h1 {
+        font-size: 1.8em; /* Reduz ainda mais o tamanho do título principal */
+    }
+    p {
+        font-size: 1em; /* Reduz ainda mais o tamanho do texto dos parágrafos */
+        margin-bottom: 20px;
+    }
+    .health-elements {
+         gap: 15px; /* Reduz ainda mais o espaço entre os elementos */
+         margin-bottom: 25px;
+    }
+    .element i {
+        font-size: 2em; /* Reduz ainda mais o tamanho dos ícones */
+        margin-bottom: 5px;
+    }
+    .element h3 {
+        font-size: 0.95em; /* Reduz ainda mais o tamanho do título do elemento */
+    }
+    .cta-button {
+        font-size: 1em; /* Reduz ainda mais o tamanho da fonte do botão */
+        padding: 10px 20px; /* Reduz ainda mais o padding do botão */
+        margin-top: 10px;
+    }
+     #loading-overlay p {
+        font-size: 1em; /* Reduz ainda mais o tamanho do texto de carregamento */
+    }
+    .loading-spinner {
+        width: 40px; /* Reduz ainda mais o tamanho do spinner */
+        height: 40px;
+        border-width: 4px; /* Reduz ainda mais a espessura do spinner */
+        margin-bottom: 15px;
+    }
+}

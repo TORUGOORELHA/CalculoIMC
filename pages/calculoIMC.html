@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC e Informações de Saúde</title>
+    <link rel="stylesheet" href="../css/styleCalc.css"> <!-- Link para o arquivo CSS -->
+    <!-- Opcional: Adicionar links para ícones ou fontes se desejar -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Índice de Massa Corporal (IMC)</h1>
+            <p class="subtitle">Uma ferramenta para avaliar sua saúde corporal.</p>
+        </header>
+
+        <section class="intro-text">
+            <h2>Entendendo o IMC</h2>
+            <p>O Índice de Massa Corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. Ele indica se você está abaixo do peso, com peso normal, sobrepeso ou obesidade, com base na sua altura e peso.</p>
+            <p>Calcular seu IMC é um bom ponto de partida para entender sua composição corporal, mas lembre-se que é apenas um indicador e não substitui a avaliação de um profissional de saúde.</p>
+        </section>
+
+        <section class="calculator-section">
+            <h2>Calcule Seu IMC</h2>
+            <div class="input-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" step="0.1" required placeholder="Ex: 70.5">
+            </div>
+            <div class="input-group">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" step="0.01" required placeholder="Ex: 1.75">
+            </div>
+            <button id="calculate-btn">Calcular IMC</button>
+        </section>
+
+        <section id="resultado-container" class="result-section">
+            <h2>Seu Resultado</h2>
+            <table id="resultado-tabela">
+                <thead>
+                    <tr>
+                        <th>Métrica</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Seu IMC</td>
+                        <td id="valor-imc">-</td>
+                    </tr>
+                    <tr>
+                        <td>Classificação</td>
+                        <td id="classificacao-imc">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="bmi-info">
+             <h2>Classificações do IMC</h2>
+             <ul>
+                 <li>Abaixo de 18.5: Abaixo do peso</li>
+                 <li>Entre 18.5 e 24.9: Peso normal</li>
+                 <li>Entre 25 e 29.9: Sobrepeso</li>
+                 <li>Entre 30 e 34.9: Obesidade Grau I</li>
+                 <li>Entre 35 e 39.9: Obesidade Grau II</li>
+                 <li>Acima de 40: Obesidade Grau III</li>
+             </ul>
+             <p class="disclaimer">Esta calculadora fornece uma estimativa. Consulte um profissional de saúde para uma avaliação completa.</p>
+        </section>
+
+        <!-- Botão para voltar para a página de navegação -->
+        <a href="../index.html" class="back-button">Voltar para Navegação</a>
+
+    </div>
+
+    <script src="../js/scriptCalc.js"></script> <!-- Link para o arquivo JavaScript -->
+</body>
+</html>
